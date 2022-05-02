@@ -1,14 +1,9 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import Cust1 from '../assests/cust-1.jpg';
-import Cust2 from '../assests/cust-2.jpg';
 import Cust3 from '../assests/cust-3.jpg';
 import quoteLeft from '../assests/quote-left-solid.png'
 import quoteRight from '../assests/quote-right-solid.png'
-import webDev from '../assests/web-dep.png'
-import softwareDev from '../assests/software-dep.png'
-import ui from '../assests/ui-ux-dep.png'
-import gameDev from '../assests/game-dep.png'
 
 // function Item(props) {
 //     return (
