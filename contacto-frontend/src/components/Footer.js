@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
     return (
-        <footer>
+        <footer id="footer-home">
         <Grid container sx={{backgroundColor: '#889AA3'}}>
             <Grid item xs>
                 <img src={footerLogo} width='200rem' sx={{borderRadius: '100%'}} alt='footer-logo' />

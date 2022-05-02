@@ -3,7 +3,7 @@ import profileImage from '../assests/create profile-how it works.jpg'
 
 export default function Working() {
     return (
-        <Grid container p={4} sx={{
+        <Grid id='working' container p={4} sx={{
             backgroundColor: '#04293A',
             color: 'white'
         }}>

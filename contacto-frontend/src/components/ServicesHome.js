@@ -14,7 +14,7 @@ import data from '../assests/chart-line-solid.png';
 
 export default function ServicesHome() {
     return (
-        <Grid container p={4} sx={{backgroundColor: '#041C32', color: 'white'}}>
+        <Grid id='services' container p={4} sx={{backgroundColor: '#041C32', color: 'white'}}>
             <Grid item xs={12}>
                 <Typography p={5} variant="h2" color='white'>Our Services</Typography>
             </Grid>

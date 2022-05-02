@@ -25,9 +25,9 @@ export default function Navbar() {
           fontSize: '1.7rem',
           fontFamily: 'roboto',
         }}>
-          <a href="#" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>About Us</a>
-          <a href="#" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>Categories</a>
-          <a href="#" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>Contact Us</a>
+          <a href="#working" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>About Us</a>
+          <a href="#services" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>Categories</a>
+          <a href="#footer-home" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>Contact Us</a>
           <a href="#" style={{textDecoration: 'none', color: 'black', padding: '0.6rem'}}>Login</a>
         </Stack>
       </Toolbar>
