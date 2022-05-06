@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import web from '../assests/globe-solid.png';
 import software from '../assests/computer-solid.png';
 import database from '../assests/database-solid.png';
@@ -11,19 +11,31 @@ import devOps from '../assests/code-solid.png';
 import wordpress from '../assests/wordpress-brands.png';
 import testing from '../assests/screwdriver-wrench-solid.png';
 import data from '../assests/chart-line-solid.png';
+import { useNavigate } from "react-router-dom";
 
 export default function ServicesHome() {
+    let navigate = useNavigate();
+    const webdev = () => {
+        let path = `/web-dev`
+        navigate(path)
+    }
+
+    const softwaredev = () => {
+        let path = `/software-dev`
+        navigate(path)
+    }
+
     return (
         <Grid id='services' container p={4} sx={{backgroundColor: '#041C32', color: 'white'}}>
             <Grid item xs={12}>
                 <Typography p={5} variant="h2" color='white'>Our Services</Typography>
             </Grid>
         <Grid item xs={4} md={2} p={5}>
-            <img src={web} width='70rem' alt='web-service' />
+            <Button onClick={webdev}><img src={web} width='70rem' alt='web-service' /></Button>
             <Typography variant="h6">Web Development</Typography>
         </Grid>
         <Grid item xs={4} md={2} p={5}>
-            <img src={software} width='70rem' alt='web-service' />
+            <Button onClick={softwaredev}><img src={software} width='70rem' alt='web-service' /></Button>
             <Typography variant="h6">Software Development</Typography>
         </Grid>
         <Grid item xs={4} md={2} p={5}>
