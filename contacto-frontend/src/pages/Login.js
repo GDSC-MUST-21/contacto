@@ -13,7 +13,12 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import loginBg from '../assests/login-bg.jpg';
+import axios from 'axios';
 
+const intialLoginData = {
+  email: '',
+  password: ''
+}
 function Copyright(props) {
   return (
     // <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -31,14 +36,32 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignInSide() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   console.log({
+  //     email: data.get('email'),
+  //     password: data.get('password'),
+  //   });
+  // };
+  const [loginData, setLoginData] = React.useState(intialLoginData);
+
+  let handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setLoginData({
+      ...loginData,
+      [name]: value
+    })
+  }
+
+  let submitForm = function (event) {
+    console.log(loginData);
+    axios.post("http://localhost:5000/submit", loginData).then((response) => {
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -74,7 +97,7 @@ export default function SignInSide() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
@@ -82,6 +105,8 @@ export default function SignInSide() {
                 id="email"
                 label="Email Address"
                 name="email"
+                value={loginData.email}
+                onChange={handleInputChange}
                 autoComplete="email"
                 autoFocus
               />
@@ -93,6 +118,8 @@ export default function SignInSide() {
                 label="Password"
                 type="password"
                 id="password"
+                value={loginData.password}
+                onChange={handleInputChange}
                 autoComplete="current-password"
               />
               {/* <FormControlLabel
@@ -103,6 +130,7 @@ export default function SignInSide() {
                 type="submit"
                 fullWidth
                 variant="contained"
+                onClick={submitForm}
                 sx={{ mt: 3, mb: 2 }}
               >
                 Sign In

@@ -1,9 +1,10 @@
 import { Button, Grid, Input, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
+import axios from "axios";
 
 const initialGigData = {
-    name: '',
+    devName: '',
     expertise: '',
     category: '',
     rate: '',
@@ -12,6 +13,24 @@ const initialGigData = {
 export default function GigProfile() {
 
     const [gigData, setGigData] = useState(initialGigData)
+
+    let handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setGigData({
+            ...gigData,
+            [name]: value
+        })
+    }
+
+    let submitForm = function (event) {
+        console.log(gigData);
+        axios.post("http://localhost:5000/submit", gigData).then((response) => {
+            console.log(response);
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+
 
     return (
         <Grid container p={5}>
@@ -22,9 +41,9 @@ export default function GigProfile() {
                         <Typography variant="body1">Name of Developer</Typography>
                         <TextField fullWidth
                             id="standard-basic"
-                            name='name'
-                            value={gigData.name}
-                            // onChange={handleInputChange}
+                            name='devName'
+                            value={gigData.devName}
+                            onChange={handleInputChange}
                             size="small"
                             placeholder="Name"
                         />
@@ -39,7 +58,7 @@ export default function GigProfile() {
                             id="standard-basic"
                             name='expertise'
                             value={gigData.expertise}
-                            // onChange={handleInputChange}
+                            onChange={handleInputChange}
                             size="small"
                             placeholder="Explain your expertise in one line"
                         />
@@ -54,14 +73,14 @@ export default function GigProfile() {
                             id="standard-basic"
                             name='rate'
                             value={gigData.rate}
-                            // onChange={handleInputChange}
+                            onChange={handleInputChange}
                             size="small"
                             placeholder="Enter rate in INR"
                         />
                     </Grid>
                 </Grid>
 
-                <Button variant="contained">Save</Button>
+                <Button variant="contained" onClick={submitForm}>Save</Button>
             </Grid>
 
         </Grid>
