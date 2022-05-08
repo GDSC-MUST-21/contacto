@@ -7,6 +7,7 @@ import GigProfile from './pages/GigProfile';
 import WebDev from './pages/WebDev';
 import SoftwareDev from './pages/SoftwareDev'
 import Login from './pages/Login';
+import UserProfile from './pages/UserProfile';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path='/software-dev' element={<SoftwareDev />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/gig' element={<GigProfile />} />
-        <Route path='/login' element={<Login/>} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/user-profile' element={<UserProfile/>} />
       </Routes>
     </div>
   );
