@@ -1,6 +1,5 @@
-import { Button, Grid, Input, TextField, Typography } from "@mui/material";
+import { Button, FormControl, FormControlLabel, Grid, Input, Radio, RadioGroup, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import Dropdown from "../components/Dropdown";
 import axios from "axios";
 
 const initialGigData = {
@@ -12,7 +11,8 @@ const initialGigData = {
 
 export default function GigProfile() {
 
-    const [gigData, setGigData] = useState(initialGigData)
+    const [gigData, setGigData] = useState(initialGigData);
+    const [categoryValue, setCategoryValue] = useState('');
 
     let handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -65,7 +65,22 @@ export default function GigProfile() {
                     </Grid>
                     <Grid item xs={12} px={4} mx={2} py={2}>
                         <Typography variant="body1">Select a category:</Typography>
-                        <Dropdown />
+                        <FormControl>
+                            <RadioGroup
+                                row
+                                aria-labelledby="demo-row-controlled-radio-buttons-group"
+                                name="category"
+                                value={gigData.category}
+                                onChange={handleInputChange}
+                            >
+                                <FormControlLabel value="Web development" control={<Radio />} label="Web development" />
+                                <FormControlLabel value="Software development" control={<Radio />} label="Software development" />
+                                <FormControlLabel value="UI/UX Development" control={<Radio />} label="UI/UX Development" />
+                                <FormControlLabel value="Database Design" control={<Radio />} label="Database Design" />
+                                <FormControlLabel value="Game Development" control={<Radio />} label="Game Development" />
+                                <FormControlLabel value="Data Science" control={<Radio />} label="Data Science" />
+                            </RadioGroup>
+                        </FormControl>
                     </Grid>
                     <Grid item xs={12} px={4} mx={2} py={2}>
                         <Typography variant="body1">Rate</Typography>
