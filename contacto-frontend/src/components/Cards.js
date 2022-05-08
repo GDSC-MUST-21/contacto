@@ -5,7 +5,6 @@ import avatar from "../assests/avatar.png";
 // import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardActions, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import StarIcon from '@mui/icons-material/Star';
 
 export default function Cards() {
     return (
@@ -56,12 +55,15 @@ export default function Cards() {
                         <Typography variant="h6" sx={{padding: '1rem'}}>username</Typography>
                     </Grid>
                 </Grid>
+                <Typography gutterBottom variant="h5" component='div'>
+                    Rate: 0.0
+                </Typography>
             </CardContent>
-            <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
+            {/* <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
                 <IconButton aria-label="delete" size="large">
                     <ThumbUpIcon />
                 </IconButton>
-            </CardActions>
+            </CardActions> */}
         </Card>
     );
 }
