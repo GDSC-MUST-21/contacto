@@ -29,7 +29,7 @@ export default function Working() {
                                 Create Your Profile
                             </Typography>
                             <Typography variant="subtitle" color="black">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Create a profile by signing up from home page or category page.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -46,7 +46,8 @@ export default function Working() {
                             Create Gig
                             </Typography>
                             <Typography variant="subtitle" color="black">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.                            </Typography>
+                            After creating your profile, create your gig by clicking on Create your gig button.                      
+                            </Typography>
                         </CardContent>
                     </Card>
                 </Grid>
@@ -62,7 +63,8 @@ export default function Working() {
                                 Find Work
                             </Typography>
                             <Typography variant="subtitle" color="black">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.                            </Typography>
+                                According to the gig you created, people may approach you for work.
+                            </Typography>
                         </CardContent>
                     </Card>
                 </Grid>
@@ -78,7 +80,7 @@ export default function Working() {
                                 Build Connections
                             </Typography>
                             <Typography variant="subtitle" color="black">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                Perform freelancing and build connections with people around the world.
                             </Typography>
                         </CardContent>
                     </Card>

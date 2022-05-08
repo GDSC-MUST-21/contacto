@@ -58,10 +58,14 @@ export default function Cards() {
                 </Grid>
             </CardContent>
             <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
-                <IconButton aria-label="delete" size="large">
+                <IconButton aria-label="delete" size="large" >
                     <ThumbUpIcon />
+                    
                 </IconButton>
+                
+                
             </CardActions>
         </Card>
+
     );
 }

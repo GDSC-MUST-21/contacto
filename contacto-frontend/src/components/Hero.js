@@ -9,14 +9,14 @@ export default function Hero() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            paddingTop: '18px',
+            paddingTop: '1px',
             }}>
-            <Grid item xs={12} sm={6} p={5} sx={{color: '#041C32', paddingTop: '2rem', textAlign: 'left'}}>
-                <Typography variant="h2" px={4} sx={{fontSize: '4.3rem'}}>Connect <span style={{color: '#fb934c'}}>Create</span> Sell</Typography>
+            <Grid item xs={10} sm={6} p={5} sx={{color: '#041C32', paddingTop: '2rem', textAlign: 'left'}}>
+                <Typography variant="h2" px={3} sx={{fontSize: '4.3rem'}}>Connect <span style={{color: '#fb934c'}}>Create</span> Sell</Typography>
                 <Typography variant="h6" px={4}><b>Find the perfect <em>freelance</em> services for your business</b></Typography>
             </Grid>
-            <Grid item xs={12} sm={6}>
-                <img src={bgImage} width='420rem' alt='hero-background' />
+            <Grid item xs={10} sm={5}>
+                <img src={bgImage} width='450rem' height='400rem' alt='hero-background' />
             </Grid>
         </Grid>
     )
