@@ -58,15 +58,14 @@ function Item(props) {
             <Grid item xs={6} >
                 <img src={props.item.image} width='510px' height='710px' alt='customer' />
             </Grid>
-            <Grid item xs={6} style={{
+            <Grid item xs={5} style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
                 <img width='120rem' src={quoteLeft} alt='left quote' />
-                <Typography variant="body1" italic>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                </Typography>
+                <Typography variant="body1" Alignment="justify">{props.item.desc}</Typography>
                 <img src={quoteRight} width='120rem' alt='right quote' />
             </Grid>
 
@@ -82,11 +81,14 @@ export default function Services() {
     const items = [
         {
             name: "Random Name #1",
-            image: `${Cust1}`
+            image: `${Cust1}`,
+            desc: "This is the easiest way to get project done. Outsourcing your weakness can save you and your company a lot of valuable time and help you focus on your strengths. The pricing is super reasonable considering there are people from all over the world competing."
+            
         },
         {
             name: "Random Name #2",
-            image: `${Cust3}`
+            image: `${Cust3}`,
+            desc: "The guys are good and will help to do your job well, for an adequate price and most importantly without cheating. It is hard to find such a useful site "
         },
 
     ]

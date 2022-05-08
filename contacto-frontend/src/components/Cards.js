@@ -59,11 +59,24 @@ export default function Cards() {
                     Rate: 0.0
                 </Typography>
             </CardContent>
+<<<<<<< HEAD
+            <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
+                <IconButton aria-label="delete" size="large" >
+=======
             {/* <CardActions sx={{display: 'flex', justifyContent: 'center'}}>
                 <IconButton aria-label="delete" size="large">
+>>>>>>> 463269fb69747ddfe329f7a233955c11dca46f4b
                     <ThumbUpIcon />
+                    
                 </IconButton>
+<<<<<<< HEAD
+                
+                
+            </CardActions>
+=======
             </CardActions> */}
+>>>>>>> 463269fb69747ddfe329f7a233955c11dca46f4b
         </Card>
+
     );
 }
